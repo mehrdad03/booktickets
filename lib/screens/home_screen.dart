@@ -1,3 +1,4 @@
+import 'package:booktickets/screens/ticket_view.dart';
 import 'package:booktickets/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
@@ -69,8 +70,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text("Upcoming Flights", style: Styles.headLineStyle2),
                       InkWell(
-                        onTap: (){
-                        },
+                          onTap: () {},
                           child: Text("View all",
                               style: Styles.textStyle.copyWith(color: primary)))
                     ],
@@ -78,7 +78,18 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
+          Gap(15),
+         SingleChildScrollView(
+           scrollDirection: Axis.horizontal,
+
+           child: Row(
+             children: [
+               TicketView(),
+               TicketView(),
+             ],
+           ),
+         )
         ],
       ),
     );
