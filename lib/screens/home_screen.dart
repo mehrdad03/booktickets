@@ -2,6 +2,7 @@ import 'package:booktickets/screens/hotel_screen.dart';
 import 'package:booktickets/screens/ticket_view.dart';
 import 'package:booktickets/utils/app_info_list.dart';
 import 'package:booktickets/utils/app_styles.dart';
+import 'package:booktickets/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -67,16 +68,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const Gap(40),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Upcoming Flights", style: Styles.headLineStyle2),
-                      InkWell(
-                          onTap: () {},
-                          child: Text("View all",
-                              style: Styles.textStyle.copyWith(color: primary)))
-                    ],
-                  )
+                  AppDoubleTextWidget(
+                      bigText: 'Upcoming Flights', smallText: 'View all')
                 ],
               ),
             ),
@@ -95,17 +88,8 @@ class HomeScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Hotels", style: Styles.headLineStyle2),
-                      InkWell(
-                          onTap: () {},
-                          child: Text("View all",
-                              style: Styles.textStyle.copyWith(color: primary)))
-                    ],
-                  )
+                children: const [
+                  AppDoubleTextWidget(bigText: 'Hotels', smallText: 'View all')
                 ],
               ),
             ),

@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../widgets/double_text_widget.dart';
+
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
@@ -65,9 +67,35 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(25)),
-          const AppIconText(text: "Departure",icon: Icons.flight_takeoff_rounded,),
-          Gap(AppLayout.getHeight(15)),
-          const AppIconText(text: "Arrival",icon: Icons.flight_land_rounded,),
+          const AppIconText(
+            text: "Departure",
+            icon: Icons.flight_takeoff_rounded,
+          ),
+          Gap(AppLayout.getHeight(20)),
+          const AppIconText(
+            text: "Arrival",
+            icon: Icons.flight_land_rounded,
+          ),
+          Gap(AppLayout.getHeight(25)),
+          Container(
+            padding: EdgeInsets.symmetric(
+                vertical: AppLayout.getWidth(18),
+                horizontal: AppLayout.getWidth(15)),
+            decoration: BoxDecoration(
+                color: Color(0xD91130CE),
+                borderRadius: BorderRadius.circular(
+                  AppLayout.getWidth(5),
+                )),
+            child: Center(
+              child: Text(
+                "Find tickets",
+                style: Styles.textStyle.copyWith(
+                    color: Colors.white,),
+              ),
+            ),
+          ),
+          Gap(AppLayout.getHeight(40)),
+          AppDoubleTextWidget(bigText: 'Upcoming Flights', smallText: 'View all')
         ],
       ),
     );
