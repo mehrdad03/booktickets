@@ -90,12 +90,161 @@ class SearchScreen extends StatelessWidget {
               child: Text(
                 "Find tickets",
                 style: Styles.textStyle.copyWith(
-                    color: Colors.white,),
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
           Gap(AppLayout.getHeight(40)),
-          AppDoubleTextWidget(bigText: 'Upcoming Flights', smallText: 'View all')
+          AppDoubleTextWidget(
+              bigText: 'Upcoming Flights', smallText: 'View all'),
+          Gap(AppLayout.getHeight(15)),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: AppLayout.getHeight(400),
+                width: size.width * .42,
+                padding: EdgeInsets.symmetric(
+                    horizontal: AppLayout.getHeight(15),
+                    vertical: AppLayout.getHeight(15)),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius:
+                        BorderRadius.circular(AppLayout.getHeight(20)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.shade200,
+                        blurRadius: 1,
+                        spreadRadius: 1,
+                      )
+                    ]),
+                child: Column(
+                  children: [
+                    Container(
+                      height: AppLayout.getHeight(190),
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(AppLayout.getHeight(12)),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/images/sit.jpg"),
+                        ),
+                      ),
+                    ),
+                    Gap(AppLayout.getHeight(12)),
+                    Text(
+                      "20% discount on the early booking of this flight",
+                      style: Styles.headLineStyle2,
+                    )
+                  ],
+                ),
+              ),
+              Column(
+                children: [
+                  Stack(
+                    children: [
+                      Container(
+                        height: AppLayout.getHeight(200),
+                        width: size.width * .44,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF3AB8B8),
+                            borderRadius:
+                                BorderRadius.circular(AppLayout.getHeight(15)),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.shade200,
+                                blurRadius: 1,
+                                spreadRadius: 1,
+                              )
+                            ]),
+                        padding: EdgeInsets.symmetric(
+                            vertical: AppLayout.getHeight(15),
+                            horizontal: AppLayout.getHeight(15)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Discount\nfor survey",
+                              style: Styles.headLineStyle2.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
+                            Gap(AppLayout.getHeight(10)),
+                            Text(
+                              "Take the survey about our services and get discount",
+                              style: Styles.headLineStyle2.copyWith(
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white,
+                                  fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        right: -45,
+                          top: -40,
+                          child: Container(
+                        padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border:
+                                Border.all(width: 18, color: Color(0xFF189999)),
+                            color: Colors.transparent),
+                      ))
+                    ],
+                  ),
+                  Gap(AppLayout.getHeight(15)),
+                  Container(
+                    height: AppLayout.getHeight(185),
+                    width: size.width * .44,
+                    decoration: BoxDecoration(
+                        color: Styles.orangeColor,
+                        borderRadius:
+                        BorderRadius.circular(AppLayout.getHeight(15)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.shade200,
+                            blurRadius: 1,
+                            spreadRadius: 1,
+                          )
+                        ]),
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppLayout.getHeight(15),
+                        horizontal: AppLayout.getHeight(15)),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Take love",
+                          style: Styles.headLineStyle2.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,),textAlign: TextAlign.center,
+                        ),
+                        Gap(AppLayout.getHeight(10)),
+                        RichText(text: const TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'X',
+                              style: TextStyle(fontSize: 38)
+                            ),TextSpan(
+                              text: 'Y',
+                              style: TextStyle(fontSize: 50)
+                            ),TextSpan(
+                              text: 'Z',
+                              style: TextStyle(fontSize: 38)
+                            ),
+                          ]
+                        ),
+
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
