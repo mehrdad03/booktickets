@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../utils/app_layout.dart';
 
 class AppTicketTab extends StatelessWidget {
-
   final String firstTab;
   final String secondTab;
 
@@ -33,7 +32,7 @@ class AppTicketTab extends StatelessWidget {
                     left: Radius.circular(AppLayout.getHeight(50))),
                 color: Colors.white,
               ),
-              child:  Center(
+              child: Center(
                 child: Text(firstTab),
               ),
             ),
@@ -45,7 +44,7 @@ class AppTicketTab extends StatelessWidget {
                     right: Radius.circular(AppLayout.getHeight(50))),
                 color: Colors.transparent,
               ),
-              child:  Center(
+              child: Center(
                 child: Text(secondTab),
               ),
             ),

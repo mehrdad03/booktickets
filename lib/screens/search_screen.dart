@@ -28,7 +28,7 @@ class SearchScreen extends StatelessWidget {
                 .copyWith(fontSize: AppLayout.getHeight(35)),
           ),
           Gap(AppLayout.getHeight(20)),
-         AppTicketTab(firstTab: "AirLine Tickets",secondTab: 'Hotels'),
+          const AppTicketTab(firstTab: "AirLine Tickets", secondTab: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(
             text: "Departure",
@@ -146,16 +146,16 @@ class SearchScreen extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        right: -45,
+                          right: -45,
                           top: -40,
                           child: Container(
-                        padding: EdgeInsets.all(AppLayout.getHeight(30)),
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border:
-                                Border.all(width: 18, color: Color(0xFF189999)),
-                            color: Colors.transparent),
-                      ))
+                            padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                    width: 18, color: Color(0xFF189999)),
+                                color: Colors.transparent),
+                          ))
                     ],
                   ),
                   Gap(AppLayout.getHeight(15)),
@@ -165,7 +165,7 @@ class SearchScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Styles.orangeColor,
                         borderRadius:
-                        BorderRadius.circular(AppLayout.getHeight(15)),
+                            BorderRadius.circular(AppLayout.getHeight(15)),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.shade200,
@@ -181,25 +181,18 @@ class SearchScreen extends StatelessWidget {
                         Text(
                           "Take love",
                           style: Styles.headLineStyle2.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,),textAlign: TextAlign.center,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
                         Gap(AppLayout.getHeight(10)),
-                        RichText(text: const TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'X',
-                              style: TextStyle(fontSize: 38)
-                            ),TextSpan(
-                              text: 'Y',
-                              style: TextStyle(fontSize: 50)
-                            ),TextSpan(
-                              text: 'Z',
-                              style: TextStyle(fontSize: 38)
-                            ),
-                          ]
-                        ),
-
+                        RichText(
+                          text: const TextSpan(children: [
+                            TextSpan(text: 'X', style: TextStyle(fontSize: 38)),
+                            TextSpan(text: 'Y', style: TextStyle(fontSize: 50)),
+                            TextSpan(text: 'Z', style: TextStyle(fontSize: 38)),
+                          ]),
                         ),
                       ],
                     ),
